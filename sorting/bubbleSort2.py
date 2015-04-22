@@ -4,7 +4,9 @@ def bubbleSort(sample):
  print("sample=",sample)
  length = len(sample)
  for i in range(length-1):
+  print(sample)
   for j in range(length-1,i,-1):
+   print("j=",j)
    if (sample[j] < sample[j-1]):
     sample[j], sample[j-1] = sample[j-1], sample[j]
  print("sorted=",sample)
