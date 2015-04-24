@@ -3,6 +3,7 @@ def selectionSort(sample):
  print("sample=",sample)
  
  for i in range(len(sample)):
+  print(sample)
   j = i+1
   minIndex = i
   while (j < len(sample)):
@@ -13,11 +14,5 @@ def selectionSort(sample):
  
  print(sample)
 
-sample1 = [14, 45, 15, 50, 72, 28, 2]
+sample1 = [14,19,65,99,909,13,303,67,43,88,77,66,999,72,21,23,57,35,1000,45, 15, 50, 72, 28, 2,200,1,100,-1000,2,29,32,3,1,44]
 selectionSort(sample1)
-sample2 = [1,2,3,4,5,6,7,8]
-selectionSort(sample2)
-sample3 = [8,7,6,5,4,3,3,3,2,1]
-selectionSort(sample3)
-sample4 = [-1,40,-1000,300,400,100,-20]
-selectionSort(sample4)
