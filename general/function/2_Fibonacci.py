@@ -1,7 +1,7 @@
->>> a, b = 0, 1
->>> while b < 20:
-	print(b)
-	a, b = b, a+b
+>>> previous, next = 0, 1
+>>> while next < 20:
+	print(next)
+	previous, next = next, next + previous
 
 	
 1
