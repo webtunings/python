@@ -1,10 +1,12 @@
-In [28]: pattern = '\w+'
+import re
+pattern = '\w+'
+text = 'abc def'
 
-In [29]: text = 'abc def'
+print(re.findall(pattern,text))
 
-In [30]: for match_string in re.findall(pattern, text):
-   ....:     print(match_string)
-   ....:     
-abc
-def
+for match_string in re.findall(pattern, text):
+   print(match_string)
+
+#abc
+#def
 
