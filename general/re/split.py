@@ -11,7 +11,7 @@ print(value)
 #['a', 'b', 'bbbbbbbbbbbbbbbbbb', 'fff', '', '', '', '', '', 'frf', '', 'eww']
 
 
-#split with one or more space
+#split with one or more spaces
 value = re.split(r'\s+',str)
 print(value)
 ['a', 'b', 'bbbbbbbbbbbbbbbbbb', 'fff', 'frf', 'eww']
