@@ -6,8 +6,9 @@ def test(**args):
         print("key = ", key)
         print("value = ", value)
     print(type(args))
-    
-test(x = 6, y = 10)
+
+
+test(x=6, y=10)
 
 '''
 {'y': 10, 'x': 6}
