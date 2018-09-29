@@ -12,3 +12,4 @@ def split_and_join(line):
     return string_joined
 
 print(split_and_join("your name is richa"))
+# your-name-is-richa
