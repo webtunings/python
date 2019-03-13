@@ -1,0 +1,17 @@
+root@NetworkAutomation-1:~# cat /etc/network/interfaces
+#
+# This is a sample network config uncomment lines to configure the network
+#
+
+
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+        address 100.1.1.100
+        netmask 255.255.255.0
+        gateway 100.1.1.4
+        up echo nameserver 100.1.1.4 > /etc/resolv.conf
+
+# DHCP config for eth0
+# auto eth0
+# iface eth0 inet dhcp
