@@ -1,17 +1,12 @@
-In [7]: import math
+import math
 
-In [8]: print("pi = %1.2f" % math.pi)
-pi = 3.14
+print("pi = %1.4f" % math.pi)
+# pi = 3.1416
 
-In [9]: print("pi = %1.3f" % math.pi)
-pi = 3.142
+str1 = "first string"
+str2 = "second string"
+str3 = "%s is first one and %s is the second one" % (str1, str2)
 
-In [10]: str1 = "first string"
-
-In [11]: str2 = "second string"
-
-In [12]: str3 = "%s is first one and %s is the second one" % (str1, str2) 
-
-In [13]: str3
-Out[13]: 'first string is first one and second string is the second one'
+print(str3)
+# 'first string is first one and second string is the second one'''
 
