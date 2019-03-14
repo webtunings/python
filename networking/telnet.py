@@ -1,9 +1,10 @@
+import time
 import telnetlib
 
 user = 'gns3'
 password = 'cisco'
 
-hosts = ['100.1.1.3', '100.1.1.4']
+hosts = ['100.1.1.3', '100.1.1.4', '100.1.1.2', '100.1.1.1', '101.6.11.1', '101.5.6.1', '101.4.6.1', '101.7.8.1', '101.7.8.2']
 
 for HOST in hosts:
     tn = telnetlib.Telnet(HOST)
@@ -16,11 +17,13 @@ for HOST in hosts:
 
     tn.write(b"enable\n")
     tn.write(b"cisco\n")
-    tn.write(b"show ip ospf neighbor\n")
+    tn.write(b"terminal length 0\n")
+    tn.write(b"show ip ospf database\n")
     tn.write(b"exit\n")
 
 
     print(tn.read_all().decode('ascii'))
+    time.sleep(2)
 
 #gns3
 #cisco
