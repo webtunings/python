@@ -1,25 +1,26 @@
-import getpass
 import telnetlib
 
-HOST = "100.1.1.3"
-user = input("Enter your remote account: ")
-password = getpass.getpass()
+user = 'gns3'
+password = 'cisco'
 
-tn = telnetlib.Telnet(HOST)
+hosts = ['100.1.1.3', '100.1.1.4']
 
-tn.read_until(b"Username: ")
-tn.write(user.encode('ascii') + b"\n")
-if password:
-    tn.read_until(b"Password: ")
-    tn.write(password.encode('ascii') + b"\n")
+for HOST in hosts:
+    tn = telnetlib.Telnet(HOST)
 
-tn.write(b"enable\n")
-tn.write(b"cisco\n")
-tn.write(b"show ip ospf neighbor\n")
-tn.write(b"exit\n")
+    tn.read_until(b"Username: ")
+    tn.write(user.encode('ascii') + b"\n")
+    if password:
+        tn.read_until(b"Password: ")
+        tn.write(password.encode('ascii') + b"\n")
+
+    tn.write(b"enable\n")
+    tn.write(b"cisco\n")
+    tn.write(b"show ip ospf neighbor\n")
+    tn.write(b"exit\n")
 
 
-print(tn.read_all().decode('ascii'))
+    print(tn.read_all().decode('ascii'))
 
 #gns3
 #cisco
